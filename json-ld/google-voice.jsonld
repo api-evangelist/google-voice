@@ -1,0 +1,44 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "gvoice": "https://voice.google.com/about#",
+    "Person": "https://schema.org/Person",
+    "primaryEmail": {
+      "@id": "https://schema.org/email",
+      "@type": "xsd:string"
+    },
+    "givenName": {
+      "@id": "https://schema.org/givenName",
+      "@type": "xsd:string"
+    },
+    "familyName": {
+      "@id": "https://schema.org/familyName",
+      "@type": "xsd:string"
+    },
+    "telephone": {
+      "@id": "https://schema.org/telephone",
+      "@type": "xsd:string"
+    },
+    "building": {
+      "@id": "gvoice:building",
+      "@type": "xsd:string"
+    },
+    "address": {
+      "@id": "https://schema.org/address",
+      "@type": "https://schema.org/PostalAddress"
+    },
+    "voicemail": {
+      "@id": "gvoice:voicemail",
+      "@type": "xsd:string"
+    },
+    "callForwarding": {
+      "@id": "gvoice:callForwarding",
+      "@type": "@json"
+    },
+    "doNotDisturb": {
+      "@id": "gvoice:doNotDisturb",
+      "@type": "xsd:boolean"
+    },
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  }
+}

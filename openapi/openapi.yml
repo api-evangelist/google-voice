@@ -1,0 +1,197 @@
+openapi: 3.1.0
+info:
+  title: Google Voice API
+  description: >-
+    Google Voice is a telecommunications service by Google that provides call
+    forwarding, voicemail, text messaging, and voice calling. While Google Voice
+    does not offer an official public REST API, the platform integrates with
+    Google Workspace for business telephony. This specification documents the
+    known endpoints and capabilities based on the Google Workspace Admin SDK
+    and related voice management interfaces for provisioning and managing
+    Google Voice services programmatically.
+  version: 1.0.0
+  contact:
+    name: Google Voice
+    url: https://voice.google.com
+  license:
+    name: Google APIs Terms of Service
+    url: https://developers.google.com/terms
+externalDocs:
+  description: Google Voice Help
+  url: https://support.google.com/voice
+servers:
+  - url: https://admin.googleapis.com
+    description: Google Workspace Admin SDK Server
+tags:
+  - name: Users
+    description: Manage Google Voice user assignments
+  - name: Locations
+    description: Manage Google Voice locations
+  - name: Settings
+    description: Manage voice settings
+paths:
+  /admin/directory/v1/customer/{customerId}/resources/buildings:
+    get:
+      operationId: listBuildings
+      summary: List Buildings
+      description: >-
+        Lists buildings associated with the Google Workspace customer, which can
+        be used for Google Voice location assignments.
+      tags:
+        - Locations
+      parameters:
+        - name: customerId
+          in: path
+          required: true
+          description: The Google Workspace customer ID.
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response with building list.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BuildingListResponse'
+  /admin/directory/v1/users:
+    get:
+      operationId: listUsers
+      summary: List Users
+      description: >-
+        Lists users in the Google Workspace domain who may be assigned Google
+        Voice licenses.
+      tags:
+        - Users
+      parameters:
+        - name: domain
+          in: query
+          description: The domain name.
+          schema:
+            type: string
+        - name: maxResults
+          in: query
+          description: Maximum number of results.
+          schema:
+            type: integer
+        - name: pageToken
+          in: query
+          description: Token for pagination.
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response with user list.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UserListResponse'
+  /admin/directory/v1/users/{userKey}:
+    get:
+      operationId: getUser
+      summary: Get User
+      description: Retrieves a user, including their Google Voice assignment status.
+      tags:
+        - Users
+      parameters:
+        - name: userKey
+          in: path
+          required: true
+          description: The user's email address or unique ID.
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response with user details.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+components:
+  schemas:
+    User:
+      type: object
+      properties:
+        id:
+          type: string
+          description: Unique identifier for the user.
+        primaryEmail:
+          type: string
+          format: email
+          description: The user's primary email address.
+        name:
+          type: object
+          properties:
+            givenName:
+              type: string
+            familyName:
+              type: string
+            fullName:
+              type: string
+        phones:
+          type: array
+          items:
+            type: object
+            properties:
+              value:
+                type: string
+                description: Phone number.
+              type:
+                type: string
+                description: Type of phone (home, work, mobile, etc.).
+              primary:
+                type: boolean
+        isEnrolledIn2Sv:
+          type: boolean
+        isAdmin:
+          type: boolean
+    UserListResponse:
+      type: object
+      properties:
+        kind:
+          type: string
+        users:
+          type: array
+          items:
+            $ref: '#/components/schemas/User'
+        nextPageToken:
+          type: string
+    Building:
+      type: object
+      properties:
+        buildingId:
+          type: string
+          description: Unique identifier for the building.
+        buildingName:
+          type: string
+          description: Name of the building.
+        description:
+          type: string
+          description: Description of the building.
+        address:
+          type: object
+          properties:
+            addressLines:
+              type: array
+              items:
+                type: string
+            locality:
+              type: string
+            administrativeArea:
+              type: string
+            postalCode:
+              type: string
+            regionCode:
+              type: string
+        floorNames:
+          type: array
+          items:
+            type: string
+    BuildingListResponse:
+      type: object
+      properties:
+        kind:
+          type: string
+        buildings:
+          type: array
+          items:
+            $ref: '#/components/schemas/Building'

@@ -1,0 +1,134 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/google-voice/refs/heads/main/json-schema/google-voice.json",
+  "title": "Google Voice API Schema",
+  "description": "JSON Schema for Google Voice related objects managed through Google Workspace Admin SDK.",
+  "type": "object",
+  "$defs": {
+    "User": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the user."
+        },
+        "primaryEmail": {
+          "type": "string",
+          "format": "email",
+          "description": "The user's primary email address."
+        },
+        "name": {
+          "type": "object",
+          "properties": {
+            "givenName": {
+              "type": "string"
+            },
+            "familyName": {
+              "type": "string"
+            },
+            "fullName": {
+              "type": "string"
+            }
+          }
+        },
+        "phones": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "value": {
+                "type": "string",
+                "description": "Phone number."
+              },
+              "type": {
+                "type": "string",
+                "description": "Type of phone."
+              },
+              "primary": {
+                "type": "boolean"
+              }
+            }
+          }
+        },
+        "isAdmin": {
+          "type": "boolean"
+        }
+      }
+    },
+    "Building": {
+      "type": "object",
+      "properties": {
+        "buildingId": {
+          "type": "string",
+          "description": "Unique identifier for the building."
+        },
+        "buildingName": {
+          "type": "string",
+          "description": "Name of the building."
+        },
+        "description": {
+          "type": "string",
+          "description": "Description of the building."
+        },
+        "address": {
+          "type": "object",
+          "properties": {
+            "addressLines": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "locality": {
+              "type": "string"
+            },
+            "administrativeArea": {
+              "type": "string"
+            },
+            "postalCode": {
+              "type": "string"
+            },
+            "regionCode": {
+              "type": "string"
+            }
+          }
+        },
+        "floorNames": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "VoiceSettings": {
+      "type": "object",
+      "properties": {
+        "voicemailGreeting": {
+          "type": "string",
+          "description": "Custom voicemail greeting."
+        },
+        "doNotDisturb": {
+          "type": "boolean",
+          "description": "Whether do-not-disturb is enabled."
+        },
+        "callForwarding": {
+          "type": "object",
+          "properties": {
+            "enabled": {
+              "type": "boolean"
+            },
+            "forwardTo": {
+              "type": "string",
+              "description": "Phone number to forward calls to."
+            }
+          }
+        },
+        "voicemailTranscription": {
+          "type": "boolean",
+          "description": "Whether voicemail transcription is enabled."
+        }
+      }
+    }
+  }
+}
