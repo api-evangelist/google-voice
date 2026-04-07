@@ -23,12 +23,10 @@ servers:
   - url: https://admin.googleapis.com
     description: Google Workspace Admin SDK Server
 tags:
-  - name: Users
-    description: Manage Google Voice user assignments
   - name: Locations
     description: Manage Google Voice locations
-  - name: Settings
-    description: Manage voice settings
+  - name: Users
+    description: Manage Google Voice user assignments
 paths:
   /admin/directory/v1/customer/{customerId}/resources/buildings:
     get:
