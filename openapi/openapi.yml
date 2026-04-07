@@ -33,7 +33,7 @@ paths:
   /admin/directory/v1/customer/{customerId}/resources/buildings:
     get:
       operationId: listBuildings
-      summary: List Buildings
+      summary: Google Voice List Buildings
       description: >-
         Lists buildings associated with the Google Workspace customer, which can
         be used for Google Voice location assignments.
@@ -56,7 +56,7 @@ paths:
   /admin/directory/v1/users:
     get:
       operationId: listUsers
-      summary: List Users
+      summary: Google Voice List Users
       description: >-
         Lists users in the Google Workspace domain who may be assigned Google
         Voice licenses.
@@ -88,7 +88,7 @@ paths:
   /admin/directory/v1/users/{userKey}:
     get:
       operationId: getUser
-      summary: Get User
+      summary: Google Voice Get User
       description: Retrieves a user, including their Google Voice assignment status.
       tags:
         - Users
