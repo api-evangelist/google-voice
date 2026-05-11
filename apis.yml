@@ -64,6 +64,45 @@ common:
     url: https://support.google.com/voice
   - type: JSONLD
     url: https://raw.githubusercontent.com/api-evangelist/google-voice/refs/heads/main/json-ld/google-voice.jsonld
+  - type: Integrations
+    url: https://workspace.google.com/integrations/
+integrations:
+  - name: Gmail
+  - name: Drive
+  - name: Meet
+  - name: Chat
+  - name: Calendar
+  - name: Tasks
+  - name: Sheets
+  - name: Slides
+  - name: Forms
+  - name: Sites
+  - name: Gemini app
+  - name: NotebookLM
+  - name: Vids
+  - name: Keep
+  - name: AppSheet
+  - name: Google Chat integrations for Workspace.
+  - name: Atlassian company
+  - name: Tableau Software company
+  - name: SAP company
+  - name: Figma company
+  - name: AO Docs company
+  - name: PagerDuty company
+  - name: Miro company
+  - name: DocuSign company
+  - name: Adobe company
+  - name: Uber company
+  - name: SADA company
+  - name: Delfingen company
+  - name: Picnic company
+  - name: Follow us on X
+  - name: YouTube
+  - name: LinkedIn
+  - name: Instagram
+  - name: Facebook
+  - name: TikTok
+  - name: Google
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
