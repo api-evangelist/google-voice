@@ -37,7 +37,7 @@ apis:
         url: https://raw.githubusercontent.com/api-evangelist/google-voice/refs/heads/main/openapi/openapi.yml
       - type: Authentication
         url: https://developers.google.com/workspace/guides/auth-overview
-      - type: Getting Started
+      - type: GettingStarted
         url: https://support.google.com/voice/answer/115061
       - type: JSONSchema
         url: https://raw.githubusercontent.com/api-evangelist/google-voice/refs/heads/main/json-schema/google-voice.json
@@ -46,7 +46,7 @@ apis:
 common:
   - type: Portal
     url: https://workspace.google.com/products/voice/
-  - type: Getting Started
+  - type: GettingStarted
     url: https://support.google.com/voice/answer/115061
   - type: Documentation
     url: https://developers.google.com/workspace/products/voice
@@ -54,11 +54,11 @@ common:
     url: https://developers.google.com/workspace/guides/auth-overview
   - type: Pricing
     url: https://workspace.google.com/products/voice/
-  - type: Terms of Service
+  - type: TermsOfService
     url: https://policies.google.com/terms
-  - type: Privacy Policy
+  - type: PrivacyPolicy
     url: https://policies.google.com/privacy
-  - type: Status
+  - type: StatusPage
     url: https://status.cloud.google.com/
   - type: Support
     url: https://support.google.com/voice
