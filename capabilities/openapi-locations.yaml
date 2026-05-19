@@ -1,0 +1,77 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Google Voice API — Locations
+  description: 'Google Voice API — Locations. 1 operations. Lead operation: Google Voice List Buildings. Self-contained Naftiko
+    capability covering one Google Voice business surface.'
+  tags:
+  - Google Voice
+  - Locations
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    GOOGLE_VOICE_API_KEY: GOOGLE_VOICE_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: openapi-locations
+    baseUri: https://admin.googleapis.com
+    description: Google Voice API — Locations business capability. Self-contained, no shared references.
+    resources:
+    - name: admin-directory-v1-customer-customerId-resources-buildings
+      path: /admin/directory/v1/customer/{customerId}/resources/buildings
+      operations:
+      - name: listbuildings
+        method: GET
+        description: Google Voice List Buildings
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: customerId
+          in: path
+          type: string
+          description: The Google Workspace customer ID.
+          required: true
+  exposes:
+  - type: rest
+    namespace: openapi-locations-rest
+    port: 8080
+    description: REST adapter for Google Voice API — Locations. One Spectral-compliant resource per consumed operation, prefixed
+      with /v1.
+    resources:
+    - path: /v1/admin/directory/v1/customer/{customerid}/resources/buildings
+      name: admin-directory-v1-customer-customerid-resources-buildings
+      description: REST surface for admin-directory-v1-customer-customerId-resources-buildings.
+      operations:
+      - method: GET
+        name: listbuildings
+        description: Google Voice List Buildings
+        call: openapi-locations.listbuildings
+        with:
+          customerId: rest.customerId
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: openapi-locations-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for Google Voice API — Locations. One tool per consumed operation, routed inline through this
+      capability's consumes block.
+    tools:
+    - name: google-voice-list-buildings
+      description: Google Voice List Buildings
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: openapi-locations.listbuildings
+      with:
+        customerId: tools.customerId
+      outputParameters:
+      - type: object
+        mapping: $.
