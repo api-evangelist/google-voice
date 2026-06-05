@@ -1,33 +1,63 @@
-# Google Voice API
+# Google Voice (google-voice)
 
 Google Voice is a telecommunications service by Google that provides call forwarding, voicemail, text messaging, and voice calling for personal and Google Workspace business accounts. While Google Voice does not offer an official standalone REST API, voice services can be managed programmatically through the Google Workspace Admin SDK for provisioning users, assigning numbers, and managing locations. Google Voice integrates with Google Workspace for enterprise telephony management.
 
-## Artifacts
+**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/google-voice/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/google-voice/refs/heads/main/apis.yml)
 
-- **APIs.yml** - Machine-readable API metadata following the APIs.json specification.
-- **OpenAPI** (`openapi/openapi.yml`) - OpenAPI 3.1.0 specification describing the available management endpoints through Google Workspace Admin SDK.
-- **JSON Schema** (`json-schema/google-voice.json`) - JSON Schema (draft 2020-12) defining user, building, and voice settings objects.
-- **JSON-LD** (`json-ld/google-voice.jsonld`) - JSON-LD context mapping Voice-related terms to schema.org and API-specific vocabularies.
+## Scope
 
-## Key Endpoints
+- **Type:** Index
 
-| Method | Path | Description |
-|--------|------|-------------|
-| GET | `/admin/directory/v1/users` | List users with Voice assignments |
-| GET | `/admin/directory/v1/users/{userKey}` | Get user details |
-| GET | `/admin/directory/v1/customer/{customerId}/resources/buildings` | List buildings for location assignment |
+## Tags
 
-## Note
+- Google Voice
+- Messaging
+- Phone
+- Telecommunications
+- Voice
+- Voicemail
+- VoIP
 
-Google Voice does not currently provide an official standalone public REST API. The endpoints documented here are part of the Google Workspace Admin SDK, which provides the closest programmatic access to managing Google Voice services in an enterprise context.
+## Timestamps
 
-## Resources
+- **Created:** 2026-03-13
+- **Modified:** 2026-05-19
 
-- [Google Voice](https://voice.google.com)
-- [Google Voice Help](https://support.google.com/voice)
-- [Google Workspace Admin SDK](https://developers.google.com/admin-sdk)
-- [Google Voice for Workspace Pricing](https://workspace.google.com/products/voice/)
+## APIs
 
-## Maintainer
+### Google Voice API
 
-Kin Lane - kin@apievangelist.com
+Management API for Google Voice services through the Google Workspace Admin SDK, enabling user provisioning, number assignment, and location management for enterprise telephony.
+
+- **Human URL:** [https://voice.google.com](https://voice.google.com)
+- **Base URL:** `https://admin.googleapis.com`
+
+#### Properties
+
+- [Documentation](https://developers.google.com/workspace/products/voice)
+- [OpenAPI](https://raw.githubusercontent.com/api-evangelist/google-voice/refs/heads/main/openapi/openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
+- [Authentication](https://developers.google.com/workspace/guides/auth-overview)
+- [Getting Started](https://support.google.com/voice/answer/115061)
+- [JSON Schema](https://raw.githubusercontent.com/api-evangelist/google-voice/refs/heads/main/json-schema/google-voice.json) — [JSON Schema](https://json-schema.org/specification)
+- [JSON-LD](https://raw.githubusercontent.com/api-evangelist/google-voice/refs/heads/main/json-ld/google-voice.jsonld) — [JSON-LD](https://www.w3.org/TR/json-ld11/)
+- [Postman Collection](collections/openapi.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
+- [Open Collection](collections/openapi.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+
+## Common Properties
+
+- [Portal](https://workspace.google.com/products/voice/)
+- [Getting Started](https://support.google.com/voice/answer/115061)
+- [Documentation](https://developers.google.com/workspace/products/voice)
+- [Authentication](https://developers.google.com/workspace/guides/auth-overview)
+- [Pricing](https://workspace.google.com/products/voice/)
+- [Terms of Service](https://policies.google.com/terms)
+- [Privacy Policy](https://policies.google.com/privacy)
+- [Status Page](https://status.cloud.google.com/)
+- [Support](https://support.google.com/voice)
+- [JSON-LD](https://raw.githubusercontent.com/api-evangelist/google-voice/refs/heads/main/json-ld/google-voice.jsonld) — [JSON-LD](https://www.w3.org/TR/json-ld11/)
+- [Integrations](https://workspace.google.com/integrations/)
+
+## Maintainers
+
+**FN:** Kin Lane
+**Email:** kin@apievangelist.com
