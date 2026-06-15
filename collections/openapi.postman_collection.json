@@ -1,0 +1,343 @@
+{
+  "item": [
+    {
+      "id": "a82d6f71-d7c1-44b4-b188-aa39b27bf8ca",
+      "name": "Locations",
+      "description": {
+        "content": "Manage Google Voice locations",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "5513aeb4-357d-4dbb-b349-0dce9fc8193f",
+          "name": "Google Voice List Buildings",
+          "request": {
+            "name": "Google Voice List Buildings",
+            "description": {
+              "content": "Lists buildings associated with the Google Workspace customer, which can be used for Google Voice location assignments.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "admin",
+                "directory",
+                "v1",
+                "customer",
+                ":customerId",
+                "resources",
+                "buildings"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "customerId",
+                  "description": "(Required) The Google Workspace customer ID."
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "b5dd5268-e6f8-453f-b1cd-c066474d3886",
+              "name": "Successful response with building list.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "admin",
+                    "directory",
+                    "v1",
+                    "customer",
+                    ":customerId",
+                    "resources",
+                    "buildings"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "customerId",
+                      "description": "(Required) The Google Workspace customer ID."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"kind\": \"string\",\n  \"buildings\": [\n    {\n      \"buildingId\": \"string\",\n      \"buildingName\": \"string\",\n      \"description\": \"string\",\n      \"address\": {\n        \"addressLines\": [\n          \"string\",\n          \"string\"\n        ],\n        \"locality\": \"string\",\n        \"administrativeArea\": \"string\",\n        \"postalCode\": \"string\",\n        \"regionCode\": \"string\"\n      },\n      \"floorNames\": [\n        \"string\",\n        \"string\"\n      ]\n    },\n    {\n      \"buildingId\": \"string\",\n      \"buildingName\": \"string\",\n      \"description\": \"string\",\n      \"address\": {\n        \"addressLines\": [\n          \"string\",\n          \"string\"\n        ],\n        \"locality\": \"string\",\n        \"administrativeArea\": \"string\",\n        \"postalCode\": \"string\",\n        \"regionCode\": \"string\"\n      },\n      \"floorNames\": [\n        \"string\",\n        \"string\"\n      ]\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "d1f1dc55-ec7d-4a8c-ba4d-196892edeedc",
+      "name": "Users",
+      "description": {
+        "content": "Manage Google Voice user assignments",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "747deabe-c990-4580-aa74-345dcf6e422c",
+          "name": "Google Voice List Users",
+          "request": {
+            "name": "Google Voice List Users",
+            "description": {
+              "content": "Lists users in the Google Workspace domain who may be assigned Google Voice licenses.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "admin",
+                "directory",
+                "v1",
+                "users"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "domain",
+                  "value": "<string>",
+                  "description": "The domain name."
+                },
+                {
+                  "disabled": false,
+                  "key": "maxResults",
+                  "value": "<integer>",
+                  "description": "Maximum number of results."
+                },
+                {
+                  "disabled": false,
+                  "key": "pageToken",
+                  "value": "<string>",
+                  "description": "Token for pagination."
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "dbf9e762-37be-46cc-a33f-0b9c9e9c0380",
+              "name": "Successful response with user list.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "admin",
+                    "directory",
+                    "v1",
+                    "users"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "domain",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "maxResults",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "pageToken",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"kind\": \"string\",\n  \"users\": [\n    {\n      \"id\": \"string\",\n      \"primaryEmail\": \"gZQAZL@HVXLQkSGWvHUmeJBiMaaKROswSjj.iwks\",\n      \"name\": {\n        \"givenName\": \"string\",\n        \"familyName\": \"string\",\n        \"fullName\": \"string\"\n      },\n      \"phones\": [\n        {\n          \"value\": \"string\",\n          \"type\": \"string\",\n          \"primary\": false\n        },\n        {\n          \"value\": \"string\",\n          \"type\": \"string\",\n          \"primary\": false\n        }\n      ],\n      \"isEnrolledIn2Sv\": false,\n      \"isAdmin\": true\n    },\n    {\n      \"id\": \"string\",\n      \"primaryEmail\": \"YzGYjvQD@cKEf.mtx\",\n      \"name\": {\n        \"givenName\": \"string\",\n        \"familyName\": \"string\",\n        \"fullName\": \"string\"\n      },\n      \"phones\": [\n        {\n          \"value\": \"string\",\n          \"type\": \"string\",\n          \"primary\": false\n        },\n        {\n          \"value\": \"string\",\n          \"type\": \"string\",\n          \"primary\": true\n        }\n      ],\n      \"isEnrolledIn2Sv\": true,\n      \"isAdmin\": true\n    }\n  ],\n  \"nextPageToken\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "e27fdac7-0fbd-4801-af96-91de9c04bce2",
+          "name": "Google Voice Get User",
+          "request": {
+            "name": "Google Voice Get User",
+            "description": {
+              "content": "Retrieves a user, including their Google Voice assignment status.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "admin",
+                "directory",
+                "v1",
+                "users",
+                ":userKey"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "userKey",
+                  "description": "(Required) The user's email address or unique ID."
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "c357fdfe-ad02-42ad-90ae-4da852e54545",
+              "name": "Successful response with user details.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "admin",
+                    "directory",
+                    "v1",
+                    "users",
+                    ":userKey"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "userKey",
+                      "description": "(Required) The user's email address or unique ID."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": \"string\",\n  \"primaryEmail\": \"bwsUWg6nzVTkxOi@GpTEisoRBoYQTKydCDNSnFc.uq\",\n  \"name\": {\n    \"givenName\": \"string\",\n    \"familyName\": \"string\",\n    \"fullName\": \"string\"\n  },\n  \"phones\": [\n    {\n      \"value\": \"string\",\n      \"type\": \"string\",\n      \"primary\": true\n    },\n    {\n      \"value\": \"string\",\n      \"type\": \"string\",\n      \"primary\": true\n    }\n  ],\n  \"isEnrolledIn2Sv\": true,\n  \"isAdmin\": false\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://admin.googleapis.com",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "e7bea106-8439-4665-b810-7839d950d7dd",
+    "name": "Google Voice API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Google Voice is a telecommunications service by Google that provides call forwarding, voicemail, text messaging, and voice calling. While Google Voice does not offer an official public REST API, the platform integrates with Google Workspace for business telephony. This specification documents the known endpoints and capabilities based on the Google Workspace Admin SDK and related voice management interfaces for provisioning and managing Google Voice services programmatically.\n\nContact Support:\n Name: Google Voice",
+      "type": "text/plain"
+    }
+  }
+}
