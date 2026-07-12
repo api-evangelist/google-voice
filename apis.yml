@@ -41,6 +41,10 @@ apis:
       - type: JSONLD
         url: https://raw.githubusercontent.com/api-evangelist/google-voice/refs/heads/main/json-ld/google-voice.jsonld
 common:
+  - type: VulnerabilityDisclosure
+    url: security/google-voice-vulnerability-disclosure.yml
+  - type: DomainSecurity
+    url: security/google-voice-domain-security.yml
   - type: Portal
     url: https://workspace.google.com/products/voice/
   - type: GettingStarted
@@ -63,6 +67,8 @@ common:
     url: https://raw.githubusercontent.com/api-evangelist/google-voice/refs/heads/main/json-ld/google-voice.jsonld
   - type: Integrations
     url: https://workspace.google.com/integrations/
+  - url: https://workspaceupdates.googleblog.com/feeds/posts/default?alt=rss
+    type: Blog
 integrations:
   - name: Gmail
   - name: Drive
