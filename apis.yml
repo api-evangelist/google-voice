@@ -41,6 +41,8 @@ apis:
       - type: JSONLD
         url: https://raw.githubusercontent.com/api-evangelist/google-voice/refs/heads/main/json-ld/google-voice.jsonld
 common:
+  - type: AgenticAccess
+    url: agentic-access/google-voice-agentic-access.yml
   - type: VulnerabilityDisclosure
     url: security/google-voice-vulnerability-disclosure.yml
   - type: DomainSecurity
