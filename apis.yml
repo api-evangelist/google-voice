@@ -6,7 +6,19 @@ description: >-
   standalone REST API, voice services can be managed programmatically through the Google Workspace Admin SDK for
   provisioning users, assigning numbers, and managing locations. Google Voice integrates with Google Workspace for
   enterprise telephony management.
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: freemium
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Freemium
+  confidence: medium
+  source:
+  - plans
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/google-voice.png
 url: https://raw.githubusercontent.com/api-evangelist/google-voice/refs/heads/main/apis.yml
 created: '2026-03-13'
 modified: '2026-05-19'
@@ -21,26 +33,53 @@ tags:
   - Voicemail
   - VoIP
 apis:
-  - name: Google Voice API
-    description: >-
-      Management API for Google Voice services through the Google Workspace Admin SDK, enabling user provisioning,
-      number assignment, and location management for enterprise telephony.
-    humanURL: https://voice.google.com
-    baseURL: https://admin.googleapis.com
-    properties:
-      - type: Documentation
-        url: https://developers.google.com/workspace/products/voice
-      - type: OpenAPI
-        url: https://raw.githubusercontent.com/api-evangelist/google-voice/refs/heads/main/openapi/openapi.yml
-      - type: Authentication
-        url: https://developers.google.com/workspace/guides/auth-overview
-      - type: GettingStarted
-        url: https://support.google.com/voice/answer/115061
-      - type: JSONSchema
-        url: https://raw.githubusercontent.com/api-evangelist/google-voice/refs/heads/main/json-schema/google-voice.json
-      - type: JSONLD
-        url: https://raw.githubusercontent.com/api-evangelist/google-voice/refs/heads/main/json-ld/google-voice.jsonld
+- aid: google-voice:google-voice-locations-api
+  name: Google Voice Locations API
+  description: Manage Google Voice locations
+  humanURL: https://voice.google.com
+  baseURL: https://admin.googleapis.com
+  tags:
+  - Locations
+  properties:
+  - type: OpenAPI
+    url: openapi/google-voice-locations-api-openapi.yml
+  - type: Documentation
+    url: https://developers.google.com/workspace/products/voice
+  - type: Authentication
+    url: https://developers.google.com/workspace/guides/auth-overview
+  - type: GettingStarted
+    url: https://support.google.com/voice/answer/115061
+  - type: JSONSchema
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/google-voice/refs/heads/main/json-schema/google-voice.json
+  - type: JSONLD
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/google-voice/refs/heads/main/json-ld/google-voice.jsonld
+- aid: google-voice:google-voice-users-api
+  name: Google Voice Users API
+  description: Manage Google Voice user assignments
+  humanURL: https://voice.google.com
+  baseURL: https://admin.googleapis.com
+  tags:
+  - Users
+  properties:
+  - type: OpenAPI
+    url: openapi/google-voice-users-api-openapi.yml
+  - type: Documentation
+    url: https://developers.google.com/workspace/products/voice
+  - type: Authentication
+    url: https://developers.google.com/workspace/guides/auth-overview
+  - type: GettingStarted
+    url: https://support.google.com/voice/answer/115061
+  - type: JSONSchema
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/google-voice/refs/heads/main/json-schema/google-voice.json
+  - type: JSONLD
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/google-voice/refs/heads/main/json-ld/google-voice.jsonld
 common:
+  - type: PostmanWorkspace
+    url: https://www.postman.com/kinlaneapi/google-voice/overview
   - type: AgenticAccess
     url: agentic-access/google-voice-agentic-access.yml
   - type: VulnerabilityDisclosure
