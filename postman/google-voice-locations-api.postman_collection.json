@@ -1,0 +1,176 @@
+{
+  "info": {
+    "_postman_id": "738ec6e7-1d73-4801-8b68-e46fb110ac79",
+    "name": "Google Voice Locations API",
+    "description": "Google Voice is a telecommunications service by Google that provides call forwarding, voicemail, text messaging, and voice calling. While Google Voice does not offer an official public REST API, the platform integrates with Google Workspace for business telephony. This specification documents the known endpoints and capabilities based on the Google Workspace Admin SDK and related voice management interfaces for provisioning and managing Google Voice services programmatically.\n\nContact Support:\n Name: Google Voice",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T01:50:30.000Z",
+    "updatedAt": "2026-07-28T01:50:30.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-738ec6e7-1d73-4801-8b68-e46fb110ac79"
+  },
+  "item": [
+    {
+      "name": "admin",
+      "item": [
+        {
+          "name": "directory",
+          "item": [
+            {
+              "name": "v1",
+              "item": [
+                {
+                  "name": "customer",
+                  "item": [
+                    {
+                      "name": "{customerId}",
+                      "item": [
+                        {
+                          "name": "resources",
+                          "item": [
+                            {
+                              "name": "buildings",
+                              "item": [
+                                {
+                                  "name": "Google Voice List Buildings",
+                                  "id": "4a393d29-fae3-4352-90d7-9aa233c6edb7",
+                                  "protocolProfileBehavior": {
+                                    "disableBodyPruning": true
+                                  },
+                                  "request": {
+                                    "method": "GET",
+                                    "header": [
+                                      {
+                                        "key": "Accept",
+                                        "value": "application/json"
+                                      }
+                                    ],
+                                    "url": {
+                                      "raw": "{{baseUrl}}/admin/directory/v1/customer/:customerId/resources/buildings",
+                                      "host": [
+                                        "{{baseUrl}}"
+                                      ],
+                                      "path": [
+                                        "admin",
+                                        "directory",
+                                        "v1",
+                                        "customer",
+                                        ":customerId",
+                                        "resources",
+                                        "buildings"
+                                      ],
+                                      "variable": [
+                                        {
+                                          "id": "79c89e51-2f7d-46b4-ab52-4edf1d6c4f54",
+                                          "key": "customerId",
+                                          "value": "<string>",
+                                          "description": "(Required) The Google Workspace customer ID."
+                                        }
+                                      ]
+                                    },
+                                    "description": "Lists buildings associated with the Google Workspace customer, which can be used for Google Voice location assignments."
+                                  },
+                                  "response": [
+                                    {
+                                      "id": "dd0b6348-0967-4c8a-8ca5-7508bb6655a8",
+                                      "name": "Successful response with building list.",
+                                      "originalRequest": {
+                                        "method": "GET",
+                                        "header": [
+                                          {
+                                            "key": "Accept",
+                                            "value": "application/json"
+                                          }
+                                        ],
+                                        "url": {
+                                          "raw": "{{baseUrl}}/admin/directory/v1/customer/:customerId/resources/buildings",
+                                          "host": [
+                                            "{{baseUrl}}"
+                                          ],
+                                          "path": [
+                                            "admin",
+                                            "directory",
+                                            "v1",
+                                            "customer",
+                                            ":customerId",
+                                            "resources",
+                                            "buildings"
+                                          ],
+                                          "variable": [
+                                            {
+                                              "key": "customerId"
+                                            }
+                                          ]
+                                        }
+                                      },
+                                      "status": "OK",
+                                      "code": 200,
+                                      "_postman_previewlanguage": "json",
+                                      "header": [
+                                        {
+                                          "key": "Content-Type",
+                                          "value": "application/json"
+                                        }
+                                      ],
+                                      "cookie": [],
+                                      "responseTime": null,
+                                      "body": "{\n  \"kind\": \"<string>\",\n  \"buildings\": [\n    {\n      \"buildingId\": \"<string>\",\n      \"buildingName\": \"<string>\",\n      \"description\": \"<string>\",\n      \"address\": {\n        \"addressLines\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"locality\": \"<string>\",\n        \"administrativeArea\": \"<string>\",\n        \"postalCode\": \"<string>\",\n        \"regionCode\": \"<string>\"\n      },\n      \"floorNames\": [\n        \"<string>\",\n        \"<string>\"\n      ]\n    },\n    {\n      \"buildingId\": \"<string>\",\n      \"buildingName\": \"<string>\",\n      \"description\": \"<string>\",\n      \"address\": {\n        \"addressLines\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"locality\": \"<string>\",\n        \"administrativeArea\": \"<string>\",\n        \"postalCode\": \"<string>\",\n        \"regionCode\": \"<string>\"\n      },\n      \"floorNames\": [\n        \"<string>\",\n        \"<string>\"\n      ]\n    }\n  ]\n}",
+                                      "createdAt": "2026-07-28T01:50:30.000Z",
+                                      "updatedAt": "2026-07-28T01:50:30.000Z",
+                                      "uid": "35240-dd0b6348-0967-4c8a-8ca5-7508bb6655a8"
+                                    }
+                                  ],
+                                  "createdAt": "2026-07-28T01:50:30.000Z",
+                                  "updatedAt": "2026-07-28T01:50:30.000Z",
+                                  "uid": "35240-4a393d29-fae3-4352-90d7-9aa233c6edb7"
+                                }
+                              ],
+                              "id": "98a827cd-08d6-403f-b298-6c08be8b7cba",
+                              "createdAt": "2026-07-28T01:50:30.000Z",
+                              "updatedAt": "2026-07-28T01:50:30.000Z",
+                              "uid": "35240-98a827cd-08d6-403f-b298-6c08be8b7cba"
+                            }
+                          ],
+                          "id": "a563f4c0-fc12-4565-b64b-03f49370f792",
+                          "createdAt": "2026-07-28T01:50:30.000Z",
+                          "updatedAt": "2026-07-28T01:50:30.000Z",
+                          "uid": "35240-a563f4c0-fc12-4565-b64b-03f49370f792"
+                        }
+                      ],
+                      "id": "e0f5fa52-e87d-4753-ad0b-3595f83d41ac",
+                      "createdAt": "2026-07-28T01:50:30.000Z",
+                      "updatedAt": "2026-07-28T01:50:30.000Z",
+                      "uid": "35240-e0f5fa52-e87d-4753-ad0b-3595f83d41ac"
+                    }
+                  ],
+                  "id": "dcc82726-5632-4d3b-b75c-9be1f881e3a9",
+                  "createdAt": "2026-07-28T01:50:30.000Z",
+                  "updatedAt": "2026-07-28T01:50:30.000Z",
+                  "uid": "35240-dcc82726-5632-4d3b-b75c-9be1f881e3a9"
+                }
+              ],
+              "id": "03b89708-0575-4d68-84f2-eff5bc02ea46",
+              "createdAt": "2026-07-28T01:50:30.000Z",
+              "updatedAt": "2026-07-28T01:50:30.000Z",
+              "uid": "35240-03b89708-0575-4d68-84f2-eff5bc02ea46"
+            }
+          ],
+          "id": "a9700b8f-5ae1-42f2-b87c-799ad9f5e2d6",
+          "createdAt": "2026-07-28T01:50:30.000Z",
+          "updatedAt": "2026-07-28T01:50:30.000Z",
+          "uid": "35240-a9700b8f-5ae1-42f2-b87c-799ad9f5e2d6"
+        }
+      ],
+      "id": "9630ddde-6b6d-46b9-8c86-86d30f8935e5",
+      "createdAt": "2026-07-28T01:50:30.000Z",
+      "updatedAt": "2026-07-28T01:50:30.000Z",
+      "uid": "35240-9630ddde-6b6d-46b9-8c86-86d30f8935e5"
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://admin.googleapis.com"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "provider": "google-voice",
+  "sources": [
+    "google-voice-locations-api-openapi.yml",
+    "google-voice-users-api-openapi.yml"
+  ],
+  "outputs": [
+    "google-voice-locations-api-openapi.yml",
+    "google-voice-users-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
