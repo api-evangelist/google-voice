@@ -1,0 +1,37 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Google Voice Locations API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Locations",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Google Voice List Buildings",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://admin.googleapis.com/admin/directory/v1/customer/:customerId/resources/buildings",
+            "params": [
+              {
+                "name": "customerId",
+                "value": "",
+                "type": "path",
+                "description": "The Google Workspace customer ID."
+              }
+            ]
+          },
+          "docs": "Lists buildings associated with the Google Workspace customer, which can be used for Google Voice location assignments."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

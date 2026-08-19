@@ -1,0 +1,130 @@
+{
+  "item": [
+    {
+      "id": "a8ecd79c-7ecb-4f91-928a-29a851d6bdff",
+      "name": "Locations",
+      "description": {
+        "content": "Manage Google Voice locations",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "e3e20444-65ed-46b2-8119-f4b89437cf53",
+          "name": "Google Voice List Buildings",
+          "request": {
+            "name": "Google Voice List Buildings",
+            "description": {
+              "content": "Lists buildings associated with the Google Workspace customer, which can be used for Google Voice location assignments.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "admin",
+                "directory",
+                "v1",
+                "customer",
+                ":customerId",
+                "resources",
+                "buildings"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "customerId",
+                  "description": "(Required) The Google Workspace customer ID."
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "6c107133-2336-4d16-8ad3-714fcbf24a64",
+              "name": "Successful response with building list.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "admin",
+                    "directory",
+                    "v1",
+                    "customer",
+                    ":customerId",
+                    "resources",
+                    "buildings"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "customerId",
+                      "description": "(Required) The Google Workspace customer ID."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"kind\": \"string\",\n  \"buildings\": [\n    {\n      \"buildingId\": \"string\",\n      \"buildingName\": \"string\",\n      \"description\": \"string\",\n      \"address\": {\n        \"addressLines\": [\n          \"string\",\n          \"string\"\n        ],\n        \"locality\": \"string\",\n        \"administrativeArea\": \"string\",\n        \"postalCode\": \"string\",\n        \"regionCode\": \"string\"\n      },\n      \"floorNames\": [\n        \"string\",\n        \"string\"\n      ]\n    },\n    {\n      \"buildingId\": \"string\",\n      \"buildingName\": \"string\",\n      \"description\": \"string\",\n      \"address\": {\n        \"addressLines\": [\n          \"string\",\n          \"string\"\n        ],\n        \"locality\": \"string\",\n        \"administrativeArea\": \"string\",\n        \"postalCode\": \"string\",\n        \"regionCode\": \"string\"\n      },\n      \"floorNames\": [\n        \"string\",\n        \"string\"\n      ]\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://admin.googleapis.com",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "3f401052-90f5-4b04-b4c8-268ca51b3ff4",
+    "name": "Google Voice Locations API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Google Voice is a telecommunications service by Google that provides call forwarding, voicemail, text messaging, and voice calling. While Google Voice does not offer an official public REST API, the platform integrates with Google Workspace for business telephony. This specification documents the known endpoints and capabilities based on the Google Workspace Admin SDK and related voice management interfaces for provisioning and managing Google Voice services programmatically.\n\nContact Support:\n Name: Google Voice",
+      "type": "text/plain"
+    }
+  }
+}

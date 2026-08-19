@@ -1,0 +1,68 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Google Voice Locations Users API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Users",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Google Voice List Users",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://admin.googleapis.com/admin/directory/v1/users",
+            "params": [
+              {
+                "name": "domain",
+                "value": "",
+                "type": "query",
+                "description": "The domain name."
+              },
+              {
+                "name": "maxResults",
+                "value": "",
+                "type": "query",
+                "description": "Maximum number of results."
+              },
+              {
+                "name": "pageToken",
+                "value": "",
+                "type": "query",
+                "description": "Token for pagination."
+              }
+            ]
+          },
+          "docs": "Lists users in the Google Workspace domain who may be assigned Google Voice licenses."
+        },
+        {
+          "info": {
+            "name": "Google Voice Get User",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://admin.googleapis.com/admin/directory/v1/users/:userKey",
+            "params": [
+              {
+                "name": "userKey",
+                "value": "",
+                "type": "path",
+                "description": "The user's email address or unique ID."
+              }
+            ]
+          },
+          "docs": "Retrieves a user, including their Google Voice assignment status."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
