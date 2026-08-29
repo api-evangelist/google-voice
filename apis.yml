@@ -6,6 +6,18 @@ description: >-
   standalone REST API, voice services can be managed programmatically through the Google Workspace Admin SDK for
   provisioning users, assigning numbers, and managing locations. Google Voice integrates with Google Workspace for
   enterprise telephony management.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: true
+  label: Hosted service · you call their endpoint
+  confidence: high
+  source:
+  - openapi
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: freemium
   onboarding: unknown
