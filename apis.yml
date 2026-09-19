@@ -51,6 +51,8 @@ apis:
   humanURL: https://voice.google.com
   baseURL: https://admin.googleapis.com
   tags:
+  - Location
+  tags_raw:
   - Locations
   properties:
   - type: OpenAPI
