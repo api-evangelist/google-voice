@@ -1,8 +1,7 @@
 {
   "provider": "google-voice",
   "sources": [
-    "google-voice-locations-api-openapi.yml",
-    "google-voice-users-api-openapi.yml"
+    "_original/openapi.yml"
   ],
   "outputs": [
     "google-voice-locations-api-openapi.yml",
@@ -12,9 +11,12 @@
   "errors": [],
   "warnings": [],
   "notes": [
-    "google-voice-locations-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
-    "google-voice-users-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
     "apis.yml register: already-registered"
   ],
-  "skipped": []
+  "skipped": [
+    "google-voice-locations-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "google-voice-users-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }
