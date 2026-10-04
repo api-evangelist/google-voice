@@ -1,21 +1,19 @@
-# Kin Score artifact — google-voice — 2026-09-02T211804
+# Kin Score artifact — google-voice — 2026-09-23T000603
 # The API Evangelist rating (https://github.com/api-evangelist/kin-score). Generated; do not edit.
 ---
 kin_score:
   slug: google-voice
-  schema_version: 0.18.0
-  scored_at: '2026-09-02'
-  run_ts: 2026-09-02T211804
-  composite: 42.6
+  schema_version: 0.22.0
+  scored_at: '2026-09-23'
+  run_ts: 2026-09-23T000603
+  composite: 41.9
   band: developing
   facets:
     discoverability: 68.5
     contract_quality: 57.1
-    governance: 9.8
-    operational_transparency: 23.7
-    developer_ergonomics: 28.6
-    commercial_clarity: 47.4
     contract_governance: 9.8
+    operational_transparency: 23.7
+    developer_ergonomics: 25.0
     access_clarity: 47.4
   agent_readiness:
     score: 22.9
