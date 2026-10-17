@@ -69,6 +69,17 @@ paths:
                 $ref: '#/components/schemas/User'
 components:
   schemas:
+    UserListResponse:
+      type: object
+      properties:
+        kind:
+          type: string
+        users:
+          type: array
+          items:
+            $ref: '#/components/schemas/User'
+        nextPageToken:
+          type: string
     User:
       type: object
       properties:
@@ -105,17 +116,6 @@ components:
           type: boolean
         isAdmin:
           type: boolean
-    UserListResponse:
-      type: object
-      properties:
-        kind:
-          type: string
-        users:
-          type: array
-          items:
-            $ref: '#/components/schemas/User'
-        nextPageToken:
-          type: string
 externalDocs:
   description: Google Voice Help
   url: https://support.google.com/voice

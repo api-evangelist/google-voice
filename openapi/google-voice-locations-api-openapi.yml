@@ -39,15 +39,6 @@ paths:
                 $ref: '#/components/schemas/BuildingListResponse'
 components:
   schemas:
-    BuildingListResponse:
-      type: object
-      properties:
-        kind:
-          type: string
-        buildings:
-          type: array
-          items:
-            $ref: '#/components/schemas/Building'
     Building:
       type: object
       properties:
@@ -79,6 +70,15 @@ components:
           type: array
           items:
             type: string
+    BuildingListResponse:
+      type: object
+      properties:
+        kind:
+          type: string
+        buildings:
+          type: array
+          items:
+            $ref: '#/components/schemas/Building'
 externalDocs:
   description: Google Voice Help
   url: https://support.google.com/voice
