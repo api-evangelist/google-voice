@@ -1,4 +1,4 @@
-# Google Voice (google-voice)
+# Google Voice
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,62 +66,143 @@
 
 Google Voice is a telecommunications service by Google that provides call forwarding, voicemail, text messaging, and voice calling for personal and Google Workspace business accounts. While Google Voice does not offer an official standalone REST API, voice services can be managed programmatically through the Google Workspace Admin SDK for provisioning users, assigning numbers, and managing locations. Google Voice integrates with Google Workspace for enterprise telephony management.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/google-voice/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/google-voice/refs/heads/main/apis.yml)
+**Areas:** Google Voice · Messaging · Phone · Telecommunications · Voice · Voicemail · VoIP
 
-## Scope
+## Google Voice on APIs.io
 
-- **Type:** Index
+Everything profiled for Google Voice is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/google-voice/](https://apis.io/providers/google-voice/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (2)
 
-- Google Voice
-- Messaging
-- Phone
-- Telecommunications
-- Voice
-- Voicemail
-- VoIP
+- [Google Voice Locations API](https://apis.io/apis/google-voice/google-voice-locations-api/) — Manage Google Voice locations
+- [Google Voice Users API](https://apis.io/apis/google-voice/google-voice-users-api/) — Manage Google Voice user assignments
 
-## Timestamps
+### Published properties
 
-- **Created:** 2026-03-13
-- **Modified:** 2026-05-19
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### Agentic access (1)
 
-### Google Voice API
+Which operations an agent can call, which act, and which need a human in the loop.
 
-Management API for Google Voice services through the Google Workspace Admin SDK, enabling user provisioning, number assignment, and location management for enterprise telephony.
+- [Google Voice Agentic Access](https://apis.io/agentic-access/google-voice/google-voice-agentic-access/)
 
-- **Human URL:** [https://voice.google.com](https://voice.google.com)
-- **Base URL:** `https://admin.googleapis.com`
+#### JSON Schema (1)
 
-#### Properties
+The data models the API reads and writes.
 
+- [Google Voice API Schema](https://apis.io/schemas/google-voice/google-voice/)
+
+#### JSON-LD (1)
+
+Linked-data contexts for the provider's vocabulary.
+
+- [Google Voice Context](https://apis.io/jsonld/google-voice/google-voice/)
+
+#### Collections (5)
+
+Postman and Open Collection request collections.
+
+- [Google Voice Locations API](https://apis.io/collections/google-voice/open-google-voice-locations-api/)
+- [Google Voice Locations Users API](https://apis.io/collections/google-voice/open-google-voice-users-api/)
+- [Google Voice API](https://apis.io/collections/google-voice/open-openapi/)
+- [Google Voice Locations API](https://apis.io/collections/google-voice/postman-google-voice-locations-api/)
+- [Google Voice Locations Users API](https://apis.io/collections/google-voice/postman-google-voice-users-api/)
+
+#### Governance rules (1)
+
+Spectral rulesets for the provider's contracts.
+
+- [Google Voice — jsonschema rules](https://apis.io/rules/google-voice/google-voice-jsonschema-spectral-rules/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Google Voice Domain Security](https://apis.io/security/google-voice/google-voice-domain-security/)
+- [Google Voice Vulnerability Disclosure](https://apis.io/security/google-voice/google-voice-vulnerability-disclosure/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Google Voice Plans Pricing](https://apis.io/plans/google-voice/google-voice-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Google Voice Rate Limits](https://apis.io/rate-limits/google-voice/google-voice-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Google Voice Finops](https://apis.io/finops/google-voice/google-voice-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.google.com/)
 - [Documentation](https://developers.google.com/workspace/products/voice)
-- [OpenAPI](https://raw.githubusercontent.com/api-evangelist/google-voice/refs/heads/main/openapi/openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Authentication](https://developers.google.com/workspace/guides/auth-overview)
-- [Getting Started](https://support.google.com/voice/answer/115061)
-- [JSON Schema](https://raw.githubusercontent.com/api-evangelist/google-voice/refs/heads/main/json-schema/google-voice.json) — [JSON Schema](https://json-schema.org/specification)
-- [JSON-LD](https://raw.githubusercontent.com/api-evangelist/google-voice/refs/heads/main/json-ld/google-voice.jsonld) — [JSON-LD](https://www.w3.org/TR/json-ld11/)
-- [Postman Collection](collections/openapi.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/openapi.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-## Common Properties
-
-- [Portal](https://workspace.google.com/products/voice/)
-- [Getting Started](https://support.google.com/voice/answer/115061)
-- [Documentation](https://developers.google.com/workspace/products/voice)
-- [Authentication](https://developers.google.com/workspace/guides/auth-overview)
+- [Getting started](https://support.google.com/voice/answer/115061)
 - [Pricing](https://workspace.google.com/products/voice/)
-- [Terms of Service](https://policies.google.com/terms)
-- [Privacy Policy](https://policies.google.com/privacy)
-- [Status Page](https://status.cloud.google.com/)
 - [Support](https://support.google.com/voice)
-- [JSON-LD](https://raw.githubusercontent.com/api-evangelist/google-voice/refs/heads/main/json-ld/google-voice.jsonld) — [JSON-LD](https://www.w3.org/TR/json-ld11/)
-- [Integrations](https://workspace.google.com/integrations/)
+- [Blog](https://workspaceupdates.googleblog.com/feeds/posts/default?alt=rss)
+- [Terms of service](https://policies.google.com/terms)
+- [Privacy policy](https://policies.google.com/privacy)
+- [Status](https://status.cloud.google.com/)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 37.5** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 66.1 |
+| Contract quality | 51.8 |
+| Contract governance | 9.8 |
+| Operational transparency | 23.7 |
+| Developer ergonomics | 25.0 |
+| Access clarity | 39.5 |
+
+**Agent readiness 20.7** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | na |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | na |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | na |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 25.8** — Telecommunications
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/google-voice/](https://apis.io/providers/google-voice/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Google Voice: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/google-voice/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
